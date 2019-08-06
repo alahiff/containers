@@ -1,1 +1,49 @@
+# Precompiler options
+CPP_OPTIONS= -DHOST=\"LinuxGNU\" \
+           -DMPI -DMPI_BLOCK=8000 -Duse_collective \
+           -DscaLAPACK -DCACHE_SIZE=4000 \
+           -Davoidalloc -Duse_bse_te \
+           -Dtbdyn -Duse_shmem
 
+CPP        = gcc -E -P -C -w $*$(FUFFIX) >$*$(SUFFIX) $(CPP_OPTIONS) 
+
+FC         = mpif90 -m64 -I$(MKLROOT)/include
+FCL        = mpif90 -m64 -I$(MKLROOT)/include
+
+FREE       = -ffree-form -ffree-line-length-none  
+
+FFLAGS     = -w
+OFLAG      = -O2 -mtune=native -m64
+OFLAG_IN   = $(OFLAG)
+DEBUG      = -O0
+
+LIBDIR     = /usr/lib/x86_64-linux-gnu
+BLAS       = 
+LAPACK     = 
+BLACS      = 
+SCALAPACK  = -L/usr/lib -lscalapack-openmpi $(BLACS)
+
+LLIBS      = $(SCALAPACK) $(LAPACK) $(BLAS)
+
+LLIBS      += -L$(MKLROOT)/lib/intel64 -Wl,--no-as-needed -lmkl_gf_lp64 -lmkl_sequential -lmkl_core -lpthread -lm -ldl
+
+INCS       = -I$(MKLROOT)/include/fftw
+
+OBJECTS    = fftmpiw.o fftmpi_map.o  fftw3d.o  fft3dlib.o  
+
+OBJECTS_O1 += fftw3d.o fftmpi.o fftmpiw.o
+OBJECTS_O2 += fft3dlib.o
+
+# For what used to be vasp.5.lib 
+CPP_LIB    = $(CPP)
+FC_LIB     = $(FC)
+CC_LIB     = gcc
+CFLAGS_LIB = -O
+FFLAGS_LIB = -O1
+FREE_LIB   = $(FREE) 
+
+OBJECTS_LIB= linpack_double.o getshmem.o 
+
+# Normally no need to change this
+SRCDIR     = ../../src
+BINDIR     = ../../bin
