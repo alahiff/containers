@@ -7,4 +7,6 @@ Images:
 * **ubuntu**: Uses the GNU compilers with the standard LAPACK, SCALAPACK and FFTW packages
 * **ubuntu-mkl**: Uses the GNU compilers and Intel's Math Kernel Library
 
-The Ubuntu images are based on https://cms.mpi.univie.ac.at/wiki/index.php/A_Ubuntu_based_installation_of_VASP.
+These images made use of content from:
+* https://cms.mpi.univie.ac.at/wiki/index.php/A_Ubuntu_based_installation_of_VASP
+* https://github.com/materialstheory/Dockerfiles/
