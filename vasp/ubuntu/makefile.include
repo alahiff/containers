@@ -20,7 +20,7 @@ DEBUG      = -O0
 LIBDIR     = /usr/lib/x86_64-linux-gnu
 BLAS       = -L$(LIBDIR) -lblas
 LAPACK     = -L$(LIBDIR) -llapack
-BLACS      = -L$(LIBDIR) -lblacsF77init-openmpi -lblacsCinit-openmpi -lblacs-openmpi
+BLACS      = 
 SCALAPACK  = -L/usr/lib -lscalapack-openmpi $(BLACS)
 
 LLIBS      = $(SCALAPACK) $(LAPACK) $(BLAS)
