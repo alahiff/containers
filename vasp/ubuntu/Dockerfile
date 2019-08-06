@@ -1,11 +1,16 @@
 FROM ubuntu:16.04
 
-# This is still a WIP!
-
 RUN apt-get update
-RUN apt-get install -y make build-essential g++ gfortran
-RUN apt-get install -y libblas-dev liblapack-dev libopenmpi-dev libscalapack-mpi-dev libfftw3-dev
-RUN apt-get install -y rsync
+RUN apt-get install -y make \
+                       build-essential \
+                       g++ \
+                       gfortran \
+                       libblas-dev \
+                       liblapack-dev \
+                       libopenmpi-dev \
+                       libscalapack-mpi-dev \
+                       libfftw3-dev \
+                       rsync
 
 ADD vasp.5.4.1.vtst.tgz /software/vasp/
 ADD makefile.include /software/vasp/vasp.5.4.1.vtst/
