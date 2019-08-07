@@ -11,7 +11,8 @@ RUN apt-get install -y make \
                        libscalapack-mpi-dev \
                        libfftw3-dev \
                        rsync \
-                       curl
+                       curl \
+                       ssh-client
 
 # MKL 2018.3-055
 RUN curl https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB \
