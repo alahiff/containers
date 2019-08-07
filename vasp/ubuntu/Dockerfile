@@ -10,7 +10,8 @@ RUN apt-get install -y make \
                        libopenmpi-dev \
                        libscalapack-mpi-dev \
                        libfftw3-dev \
-                       rsync
+                       rsync \
+                       ssh-client
 
 ADD vasp.5.4.1.vtst.tgz /software/vasp/
 ADD makefile.include /software/vasp/vasp.5.4.1.vtst/
