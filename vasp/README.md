@@ -1,5 +1,5 @@
 # VASP
-https://cms.mpi.univie.ac.at/wiki/index.php/The_VASP_Manual
+Documentation: https://cms.mpi.univie.ac.at/wiki/index.php/The_VASP_Manual
 
 A VASP licence is required in order to build these images.
 
