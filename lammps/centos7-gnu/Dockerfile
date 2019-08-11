@@ -13,9 +13,8 @@ ENV LD_LIBRARY_PATH /usr/lib64/openmpi/lib:${LD_LIBRARY_PATH}
 
 RUN cd /tmp && \
     wget https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz && \
-    tar xzvf stable_12Dec2018.tar.gz
-
-RUN cd /tmp/lammps-stable_12Dec2018/src && \
+    tar xzvf stable_12Dec2018.tar.gz && \
+    cd /tmp/lammps-stable_12Dec2018/src && \
     make yes-standard no-lib no-ext yes-user-omp && \
     sed -i "/CCFLAGS =/c\CCFLAGS =       -g -O3 -fopenmp" /tmp/lammps-stable_12Dec2018/src/MAKE/Makefile.mpi && \ 
     sed -i "/LINKFLAGS =/c\LINKFLAGS =     -g -O -fopenmp" /tmp/lammps-stable_12Dec2018/src/MAKE/Makefile.mpi && \ 
