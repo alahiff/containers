@@ -10,4 +10,5 @@ Images:
 
 These images are based on content from:
 * https://cms.mpi.univie.ac.at/wiki/index.php/A_Ubuntu_based_installation_of_VASP
+* https://cms.mpi.univie.ac.at/wiki/index.php/Linking_gfortran_with_Intel_MKL
 * https://github.com/materialstheory/Dockerfiles/
