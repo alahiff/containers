@@ -1,6 +1,6 @@
 # LAMMPS with the USER-INTEL package
 
-ased on https://github.com/intel/HPC-containers-from-Intel/tree/master/containers/lammps.
+Based on https://github.com/intel/HPC-containers-from-Intel/tree/master/containers/lammps.
 
 We only have access to Intel licences on an HPC system on which we cannot run Docker but we can run Singularity.
 
