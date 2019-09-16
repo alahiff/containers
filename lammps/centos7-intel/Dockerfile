@@ -22,3 +22,5 @@ ENV NLSPATH /opt/intel/psxe_runtime_2018.4.274/linux/mkl/lib/intel64_lin/locale/
 ENV PATH /opt/intel/psxe_runtime_2018.4.274/linux/mpi/intel64/bin:/opt/intel/psxe_runtime_2018.4.274/linux/mpi/intel64/bin:/opt/intel/psxe_runtime_2018.4.274/linux/mpi/intel64/bin:/opt/intel/psxe_runtime_2018.4.274/linux/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV PKG_CONFIG_PATH /opt/intel/psxe_runtime_2018.4.274/linux/mkl/bin/pkgconfig:/opt/intel/psxe_runtime_2018.4.274/linux/mkl/bin/pkgconfig
 ENV TBBROOT /opt/intel/psxe_runtime_2018.4.274/linux/tbb
+
+COPY lmp_intel_cpu_intelmpi /usr/local/bin/
