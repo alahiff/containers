@@ -2,7 +2,7 @@
 
 ased on https://github.com/intel/HPC-containers-from-Intel/tree/master/containers/lammps.
 
-We only have access to Intel licenses on an HPC system on which we cannot run Docker but we can run Singularity.
+We only have access to Intel licences on an HPC system on which we cannot run Docker but we can run Singularity.
 
 1. Build a base image containing the Intel runtime but without LAMMPS (the included Dockerfile with the last line removed).
 2. Then on the system with an Intel license build LAMMPS inside a Singularity container with the full Intel compile bind-mounted:
